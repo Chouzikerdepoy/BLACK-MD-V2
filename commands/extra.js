@@ -5,7 +5,7 @@
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
  * @project_name : BLACK-MD
- * @author : SalmaytOfficial <https://github.com/Bladeh4x>
+ * @author : SalmaytOfficial <https://github.com/excelottah6>
  * @description : BLACK , A Multi-functional whatsapp bot.
  * @version 0.0.6
  *
