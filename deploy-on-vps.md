@@ -25,8 +25,8 @@
 
    5. Clone Repo and install required packages
       ```
-      git clone https://github.com/salmanytofficial/XLICON-MD
-      cd XLICON-MD
+      git clone https://github.com/excelottah6/BLACK-MD-V2
+      cd BLACK-MD-V2
       yarn install --network-concurrency 1
       ```
 
@@ -38,14 +38,14 @@
       copy paste lines below.
 
       ```
-      OWNER_NUMBER="92xxxxxxxxxx"
+      OWNER_NUMBER="234xxxxxxxxxx"
       MONGODB_URI="mongodb+srv://*************"
       SESSION_ID = "Put Session Id Here"
       THUMB_IMAGE = "https://telegra.ph/file/8f6f537cc4103b48f3783.jpg"
       port = 5000
       email = "xxxxxxxxxxxxx@gmail.com"
       global_url = "www.instagram.com/sla.sher_"
-      OWNER_NAME = "SALMAN"
+      OWNER_NAME = "EXCEL"
       AUTO_REACTION = false
       FAKE_COUNTRY_CODE = 354
       READ_MESSAGE = false
