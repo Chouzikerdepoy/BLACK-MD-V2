@@ -37,7 +37,7 @@ cmd({
     alias :['gpt'],
     desc: "chat with an AI(GPT)",
     category: "AI",
-    use: '<Hii,blade>',
+    use: '<Hii,black>',
     filename: __filename,
 },
 async(Void, citel,text) => {
@@ -46,7 +46,7 @@ async(Void, citel,text) => {
         let {data} = await axios.get(`http://api.brainshop.ai/get?bid=167991&key=aozpOoNOy3dfLgmB&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
         return citel.reply(data.cnt);  
     }
-    if (!text) return citel.reply(`Hey there! ${citel.pushName}. How are you doing these days?`);
+    if (!text) return citel.reply(`Hey there! ${citel.pushName}. How are you doing ?`);
     // const { Configuration, OpenAIApi } = require("openai");
     // const configuration = new Configuration({
     //     apiKey: Config.OPENAI_API_KEY || "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",
@@ -132,11 +132,11 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/Bladeh4x/BLADE-MD')
+        let { data } = await axios.get('https://api.github.com/repos/excelottah6/BLACK-MD-v2')
         let cap = `Hey ${citel.pushName}\n
 *⭐ Total Stars:* ${data.stargazers_count} stars
 *🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* https://github.com/Bladeh4x/BLADE-MD
+*🍁 Repo:* https://github.com/excelottah6/BLACK-MD
 *Group:* https://chat.whatsapp.com/ErxOiX1qQgk9phDJhnUiDQ
 *Deploy Your Own:*-
 citel-x.herokuapp.com`
