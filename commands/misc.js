@@ -69,7 +69,7 @@ async(Void, citel, text,{ isCreator }) => {
       let num = citel.sender;
   
       var welcome_messages = text.replace(/@pp/g, '').replace(/@user/gi, `@${num.split("@")[0]}`).replace(/@gname/gi, metadata.subject).replace(/@desc/gi, metadata.desc);
-      try {  ppuser = await Void.profilePictureUrl(num, 'image') }catch { ppuser = 'https://telegra.ph/file/93f1e7e8a1d7c4486df9e.jpg' ; }
+      try {  ppuser = await Void.profilePictureUrl(num, 'image') }catch { ppuser = 'https://i.imgur.com/MA8Tb09.jpeg' ; }
       return await Void.sendMessage(citel.chat, { image: { url: ppuser }, caption: welcome_messages,} )
 
 
@@ -107,7 +107,7 @@ async(Void, citel, text,{ isCreator }) => {
     var ppuser;
     let num = citel.sender;
     var goodbye_messages = text.replace(/@pp/g, '').replace(/@user/gi, `@${num.split("@")[0]}`).replace(/@gname/gi, metadata.subject).replace(/@desc/gi, metadata.desc);
-    try {  ppuser = await Void.profilePictureUrl(num, 'image') }catch { ppuser = 'https://telegra.ph/file/93f1e7e8a1d7c4486df9e.jpg' ; }
+    try {  ppuser = await Void.profilePictureUrl(num, 'image') }catch { ppuser = 'https://i.imgur.com/MA8Tb09.jpeg' ; }
 
         return await Void.sendMessage(citel.chat, { image: { url: ppuser }, caption: goodbye_messages, })
 
@@ -330,7 +330,7 @@ async(Void, citel, text) => {
 ║ *👤Num :* ${num}
 ║ *🎐Bio    :*  ${bioo}
 ║ *🌟SetAt :* ${setAt}
-║    *Keep Calm Dude🥳*    ◇
+║    *Keep Calm Dude😁*    ◇
 ╚════════════════╝
 `,
             },{quoted:citel});
