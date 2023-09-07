@@ -1,14 +1,14 @@
 {
-  "name": "BLADE-MD",
+  "name": "BLACK-MD",
   "description": "A Whatsapp md bot built in NodeJs to make experience better",
   "logo": "https://telegra.ph/file/3c341828d86ee7a89c73f.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "blade Bot", "blade","BLADE-MD","theme bot","multi device","baileys","Alex tv"],
+  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "black Bot", "blade","BLACK-MD","theme bot","multi device","baileys","excel"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
   "description": "BOT OWNER NAME",
-      "value": "alexdavid"
+      "value": "excel"
   },
   "ALIVE_MESSAGE": {
     "description": " SET YOUR ALIVE MESSAGE FOR THE BOT",
@@ -86,11 +86,11 @@
   },
     "THEME": {
     "description": "Put the theme name you want to use. Avilable themes are GOJO,blade-md,NEZUKO,LUFFY,GOKU and many more..",
-     "value": "blade-md"
+     "value": "GOJO"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
-         "value": "public"
+         "value": "private"
   },
       "AUTO_REACTION": {
     "description": "Reacts emoji to all commands.",
@@ -99,7 +99,7 @@
   },
   "PACK_AUTHOR": {
     "description": "PUT STICKER AUTHER NAME",
-    "value": "BLADE"
+    "value": "BLACK"
   },
   "PACK_NAME": {
     "description": "PUT STICKER PACK NAME",
