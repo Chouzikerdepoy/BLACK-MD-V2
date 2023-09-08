@@ -73,7 +73,7 @@
        "value": "Put Owner Number here"
   },
    "SESSION_ID": {
-    "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to BLADE-MD Github Repo U can find the Scanner Option"
+    "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to BLACK-MD Github Repo U can find the Scanner Option"
      "required" :true
   },
     "OPENAI_API_KEY": {
