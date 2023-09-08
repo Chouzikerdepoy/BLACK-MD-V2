@@ -134,12 +134,14 @@ cmd({
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/excelottah6/BLACK-MD-v2')
         let cap = `Hey ${citel.pushName}\n
+	════ ⋆★⋆ ════
 *⭐ Total Stars:* ${data.stargazers_count} stars
-*🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* https://github.com/excelottah6/BLACK-MD-v2
+*👾 Forks:* ${data.forks_count} forks
+*👾 Repo:* https://github.com/excelottah6/BLACK-MD-v2
 *Group:* https://chat.whatsapp.com/FixEhA9BNH46sYyLOAqCps
 *Deploy Your Own:*-
-citel-x.herokuapp.com`
+citel-x.herokuapp.com
+════ ⋆★⋆ ════`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -176,12 +178,14 @@ cmd({
         latensie = speed() - timestampe;
         let ter = `
 🥷 *${tlang().title}* 🥷
+════ ⋆★⋆ ════
 *😁Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
-*⚡Speed:* ${latensie.toFixed(4)} ms
+*⚡️Speed:* ${latensie.toFixed(4)} ms
 *📡Uptime:* ${runtime(process.uptime())}
-*🕸Version:* 0.0.7
+*🗂Version:* 0.0.7
 *👤Owner:*  ${Config.ownername}
 *Powered by ${tlang().title}*
+════ ⋆★⋆ ════
 `;
         let buttonMessaged = {
             image: {
@@ -218,8 +222,8 @@ cmd({
 async(Void, citel,text,{isCreator}) => {
 
 if(!isCreator) return citel.reply(tlang().owner);
-let str="*All available themes in ʙʟᴀᴅᴇ-ᴍᴅ*"
-str+=`  \n1. GOJO\n2. SONIC-MD\n3. AYANOKOJI\n4. DEKU\n5. RENGOKU\n6. GENOS\n7. GABIMARU\n8. GOKU\n9. ERENJAEGER\n10. LUFFY\n11. NARUTO\n12. NEZUKO\n13. PARKER\n14. blade-md\n15. MAKIMA\n16. THOMAS\n17. PATRICK\n\n these are the themes of ʙʟack-ᴍᴅ Userbot.\_Reply ${prefix}setvar THEME:GOJO`
+let str="*All available themes in ʙʟᴀck-ᴍᴅ*"
+str+=`  \n1. GOJO\n2. ONE-PUNCH\n3. AYANOKOJI\n4. DEKU\n5. RENGOKU\n6. GENOS\n7. GABIMARU\n8. GOKU\n9. ERENJAEGER\n10. LUFFY\n11. NARUTO\n12. NEZUKO\n13. PARKER\n14. CODM\n15. MAKIMA\n16. THOMAS\n17. PATRICK\n\n these are the themes of ʙʟack-ᴍᴅ Userbot.\_Reply ${prefix}setvar THEME:GOJO`
 return citel.reply(str)
     
 }
