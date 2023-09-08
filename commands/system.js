@@ -340,7 +340,7 @@ cmd({
         async(Void, citel, text, isAdmins) => {
             let alivemessage = Config.ALIVE_MESSAGE || `*ᴀ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ᴛᴇᴀᴍ ʙʟack.*`
             const alivtxt = `
-*Hello, ${citel.pushName},*
+*Hey, ${citel.pushName},*
 _This is  ${tlang().title}._
 ${alivemessage}
 
@@ -349,7 +349,7 @@ ${alivemessage}
 *Owner:-* _${Config.ownername}_
 *Branch:-* _${Config.BRANCH}_
 
-_Type ${prefix}menu for my command list._
+_Type ${prefix}menu for my cmd list._
 
 _Powered by ${Config.ownername}_
 `;
