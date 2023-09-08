@@ -18,10 +18,10 @@
 
 CURRENTLY RUNNING ON BETA VERSION!!
 *
-   * @project_name : Suhail-Md
+   * @project_name : Black-Md
    * @author : Suhail Tech Info
    * @youtube : https://www.youtube.com/c/@SuhailTechInfo0
-   * @description : Suhail-Md ,A Multi-functional whatsapp user bot.
+   * @description : Black-Md ,A Multi-functional whatsapp user bot.
    * @version 1.0.8
 *
    * Licensed under the  GPL-3.0 License;
