@@ -36,18 +36,18 @@
      "value": "https://i.imgur.com/MA8Tb09.jpeg"
     },
     "ANTI_BAD_WORD": {
-    "description": "Put words here. If you want it enabled in your bot otherwise leave it blank",
+    "description": "put your antiword here",
      "required" :false
     },
    "ANTILINK_VALUES": {
-    "description": "Put words for antilink",
+    "description": "_link not allowed here bruh_",
      "value": "chat.whatsapp.com",
-     "required" :false
+     "required" false
     },
      "ANTILINK_ACTION": {
     "description": "Put action for antilink",
      "value": "remove",
-     "required" :false
+     "required" false
     },
   "LEVEL_UP_MESSAGE": {
     "description": "Fill the value true if you want bot send Level up message in chat.",
@@ -74,10 +74,11 @@
   },
    "SESSION_ID": {
     "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to BLADE-MD Github Repo U can find the Scanner Option"
+     "required" :true
   },
     "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com(optional if u don't wan't then don't put it ",
-       "value": "https://gurugpt.cyclic.app/dalle?prompt=elon%20musk&model=art",
+       "value": "",
        "required" :false
   },
   "MONGODB_URI": {
