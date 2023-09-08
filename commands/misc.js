@@ -19,10 +19,10 @@
 
 CURRENTLY RUNNING ON BETA VERSION!!
 *
-   * @project_name : BLADE-MD
+   * @project_name : BLACK-MD
    * @author : Suhail Tech Info
    * @youtube : https://www.youtube.com/SuhailTechInfo
-   * @description : BLADE-MD ,A Multi-functional whatsapp user bot.
+   * @description : BLACK-MD ,A Multi-functional whatsapp user bot.
    * @version 1.0.1
 *
    * Licensed under the  GPL-3.0 License;
@@ -218,7 +218,7 @@ else return citel.reply("```This is Not A ViewOnce Message```")
          let cord2 = parseFloat(text.split(',')[1]) || ''
          if(!cord1 || isNaN(cord1) ||  !cord2 || isNaN(cord2)) return await  citel.reply("```Cordinates Not In Formate, Try Again```") 
 
-let txt  = "*----------LOCATION------------*"
+let txt  = "----------LOCATION------------"
    txt +="``` \n Sending Location Of Given Data: ";
    txt +="\n Latitude     :  "+cord1;
    txt +="\n Longitude  :  "+cord2 +"```\n"+Config.caption;
@@ -323,15 +323,15 @@ async(Void, citel, text) => {
          return await Void.sendMessage(citel.chat, {
                 image: {   url: pfp  },
                 caption: `
-╔════◇
-║ *『Person's  Information』*
-║ 
-║ *🍫Name :* ${tname}
-║ *👤Num :* ${num}
-║ *🎐Bio    :*  ${bioo}
-║ *🌟SetAt :* ${setAt}
-║    *Keep Calm Dude😁*    ◇
-╚════════════════╝
+■□■□■□■□■□■□■□■■□■□■□■□■□■□■□■
+┕ ┓ *『USER  INFO』*
+┕ ┓ 
+┕ ┓ *📡Name :* ${tname}
+┕ ┓ *👤Num :* ${num}
+┕ ┓ *🎐Bio    :*  ${bioo}
+┕ ┓ *⏱SetAt :* ${setAt}
+┕ ┓    *WELLDONE BRO😁*    ◇
+■□■□■□■□■□■□■□■■□■□■□■□■□■□■□■
 `,
             },{quoted:citel});
 
@@ -880,7 +880,7 @@ else return citel.reply(`Antispam : kick Users Who Spamming in Groupn\n\nAntispa
  cmd({ on: "body" }, async(Void, citel) => {
    if (!Config.autoreaction) return 
    else if (Config.autoreaction === 'true' && citel.text.startsWith(prefix)) {
-         const emojis = ['❤', '💕', '😻', '🧡', '💛', '💚', '💙', '💜', '🖤', '❣', '💞', '💓', '💗', '💖', '💘', '💝', '💟', '♥', '💌', '🙂', '🤗', '😌', '😉', '🤗', '😊', '🎊', '🎉', '🎁', '🎈', '👋']
+         const emojis = ['❤', '✨', '😁', '🧡', '💛', '💚', '💙', '💜', '🖤', '❣', '💞', '💓', '💗', '💖', '💘', '💝', '💟', '♥', '💌', '🙂', '🤗', '😌', '😉', '🤗', '😊', '🎊', '🎉', '👾', '⏱', '📡']
          const emokis = emojis[Math.floor(Math.random() * (emojis.length))]
          Void.sendMessage(citel.chat, {
              react: {
