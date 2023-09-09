@@ -1,121 +1,106 @@
 {
-  "name": "BLACK-MD",
-  "description": "A Whatsapp md bot built in NodeJs to make experience better",
-  "logo": "https://i.imgur.com/MA8Tb09.jpeg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "black Bot", "blade","BLACK-MD","theme bot","multi device","baileys","excel"],
+  "name": "Suhail-Md By Suhail Tech Info",
+  "description": "A Whatsapp bot built in NodeJs to make experience better\n\t if Any Problem : www.youtube.com/c/SuhailTechInfo",
+  "logo": "https://i.imgur.com/NpA3ZsJ.jpeg",
+  "keywords": ["whatsappbot", "suhailMd", "suhail Md Wa bot", "Suhail-Md", "SuhailMdWhatsaooBot", "SuhailWaBot","SuhailMD","Suhail Md Whatsapp Bot","multi device"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
-  "description": "BOT OWNER NAME",
-      "value": "excel"
+    "description": "Name of Bot Owner",    
+    "value": "Suhail Tech Info",
+    "required" :true
   },
-  "ALIVE_MESSAGE": {
-    "description": " SET YOUR ALIVE MESSAGE FOR THE BOT",
-     "required" :false
-    },
-    "AUTO_STATUS_SAVER": {
-      "description": "Automatically saves status of every person and sends in log number.",
-       "required" :false
-       },
+  "HEROKU_API_KEY": {
+    "description": "Put Your Heroku Api Key Here",
+    "value": "",
+	  "required" :true 
+  }, 
+  "HEROKU_APP_NAME": {
+    "description": "Put Your Heroku App Name Here",
+    "value": "",
+	 "required" :false
+  },
+  "LEVEL_UP_MESSAGE": {
+    "description": "Fill the value true if you want bot send Level up message in chat.",
+    "required" :false,
+    "value": "true"
+  },
   "AUTO_READ_STATUS": {
     "description": "Fill the value true if you want bot view your Statuses.",
     "required" :false,
+    "value": "true"
+  },
+  "MSGS_IN_LOG": {
+    "description": "Fill the value true if you want to see Messages in Console.",
+    "required" :false,
     "value": "false"
-      },
-    "HEROKU_API_KEY": {
-    "description": "Put HEROKU API KEY",
-     "required" :true
-    },
-  "HEROKU_APP_NAME": {
-    "description": "Put HEROKU APP NAME same as above.",
-     "required" :true
-    },
-   "THUMB_IMAGE": {
-    "description": "THUMBNAIL for bot.",
-     "value": "https://i.imgur.com/MA8Tb09.jpeg"
-    },
-    "ANTI_BAD_WORD": {
-    "description": "put your antiword here",
-     "required" :false
-    },
-   "ANTILINK_VALUES": {
-    "description": "put your antilink here",
-     "value": "chat.whatsapp.com",
-     "required": false
-    },
-     "ANTILINK_ACTION": {
-    "description": "Put action for antilink",
-     "value": "remove",
-     "required": false
-    },
-  "LEVEL_UP_MESSAGE": {
-    "description": "Fill the value true if you want bot send Level up message in chat.",
-     "required" :false,
-     "value": "true"
-    },
-      "READ_MESSAGE": {
+  },
+  "READ_MESSAGE": {
     "description": "Fill the value true if you want bot to read all messages.",
-     "required" :false,
-     "value": "true"
-    },
-    "DISABLE_PM": {
-      "description": "Disable bot in pm",
-      "value": "false",
-      "required" :false
-    },
-      "PREFIX": {
-  "description": "Enter your prefix for bot.",
-      "value": "."
+    "required" :false,
+    "value": "false"
+  },
+  "DISABLE_PM": {
+    "description": "Disable bot in pm, Take it false if you wanna run bot in your pm",
+    "value": "false",
+    "required" :false
+  },
+  "ALWAYS_ONLINE": {
+    "description": "Take it 'true' if you wanna show Always Onlline",
+    "value": "false",
+    "required" :false
+  },
+  "PREFIX": {
+    "description": "Enter your desired prefix for bot.",
+    "value": "."
   },
   "OWNER_NUMBER": {
     "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
-       "value": "Put Owner Number here"
+    "value": "923184474176"
   },
    "SESSION_ID": {
-    "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to BLACK-MD Github Repo U can find the Scanner Option"
-     "required" :true
+    "description": "Please put your SESSION_ID here,if you don't have visit\nhttps://replit.com/@SuhailTechInfo/Secktor-Bot"
   },
-    "OPENAI_API_KEY": {
-    "description": "Please put your OPENAI api key here.Get it from beta.openai.com(optional if u don't wan't then don't put it ",
-       "value": "",
-       "required" :false
+  "OPENAI_API_KEY": {
+    "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
+    "value": "",
+    "required" :false
+  },
+  "REMOVE_BG_KEY": {
+    "description": "Please put your REMOVE BG KEY here.Get it from removeBg.com ",
+    "value": "",
+    "required" :false
   },
   "MONGODB_URI": {
-    "description": "A secret String for Mongodb Connection.(Required),change for better experience",
-    "value": "mongodb://uufpxy0mfyeykbrxkjpk:m1b0dsDODVFWlBy3AF3@bufirembtiksxw6ni25m-mongodb.services.clever-cloud.com:2533/bufirembtiksxw6ni25m"
+    "description": "Put your own Mongodb key. Its a secret String for Mongodb Connection.(Required)",
+    "value": ""
   },
-    "THEME": {
-    "description": "Put the theme name you want to use. Avilable themes are GOJO,CODM,NEZUKO,LUFFY,GOKU and many more..",
-     "value": "GOJO"
+  "MODE": {
+    "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
+    "value": "private"
   },
-    "WORKTYPE": {
-  "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
-         "value": "private"
-  },
-      "AUTO_REACTION": {
-    "description": "Reacts emoji to all commands.",
-     "value": "false",
-     "required": false 
-  },
-  "PACK_AUTHOR": {
-    "description": "PUT STICKER AUTHER NAME",
-    "value": "BLACK"
+  "AUTO_REACTION": {
+    "description": " Set it `true` If You Wants To Reacts emoji to all commands. \n And Set it `all` is You Wants to React Emojies to All Messages",
+    "value": "false",
+    "required": false 
   },
   "PACK_NAME": {
-    "description": "PUT STICKER PACK NAME",
-    "value": "Wa-BOT"
+    "description": "Put Sticker Pack_Name.",
+    "value": "",
+    "required": false 
   },
-  "heroku": {
-    "description": "Weather it is on heroku or not",
-     "value": "true",
-     "required": false 
+  "PACK_AUTHER": {
+    "description": "Put Sticker Author_Name.",
+    "value": "",
+    "required": false 
   }
 },
-"formation": {
-		"worker": {
-			"quantity": 1,
-			"size": "basic"
+
+"addons": [
+		{
+			"plan": "heroku-postgresql"
 		}
-	}
+	]
+ 
 }
