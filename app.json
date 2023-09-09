@@ -40,14 +40,14 @@
      "required" :false
     },
    "ANTILINK_VALUES": {
-    "description": "_link not allowed here bruh_",
+    "description": "put your antilink here",
      "value": "chat.whatsapp.com",
-     "required" false
+     "required": false
     },
      "ANTILINK_ACTION": {
     "description": "Put action for antilink",
      "value": "remove",
-     "required" false
+     "required": false
     },
   "LEVEL_UP_MESSAGE": {
     "description": "Fill the value true if you want bot send Level up message in chat.",
