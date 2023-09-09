@@ -3,9 +3,9 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : XLICON-MD
+ * @project_name : BLACK-MD
  * @author : salmanytofficial <https://github.com/salmanytofficial/XLICON-MD>
- * @description : XLICON,A Multi-functional whatsapp bot.
+ * @description : BLACK,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -44,7 +44,7 @@ if (mime =="imageMessage" || mime =="stickerMessage")
          
         })
         
-} else return citel.reply ("```Uhh Please, Reply To A Non Animated Sticker```")
+} else return citel.reply ("```Please, Reply To A Non Animated Sticker```")
     }
 )
 //---------------------------------------------------------------------------
@@ -82,7 +82,7 @@ if(quot.message.videoMessage)
 catch(e) {   }     
 
        
-if(!citel.quoted) return citel.reply("```Uh Please Reply A ViewOnce Message```")           
+if(!citel.quoted) return citel.reply("```Please Reply A ViewOnce Message```")           
 if(citel.quoted.mtype === "viewOnceMessage")
 { console.log("ViewOnce Entered") 
  if(citel.quoted.message.imageMessage )
@@ -99,7 +99,7 @@ else if(citel.quoted.message.videoMessage )
 }
 
 }
-else return citel.reply("```This is Not A ViewOnce Message```")
+else return citel.reply("```Not A ViewOnce Message```")
 
 })    //---------------------------------------------------------------------------
 cmd({
@@ -160,14 +160,14 @@ cmd({
             pattern: "fancy",
             desc: "Makes stylish/fancy given text",
             category: "converter",
-            use: '56 Secktor',
+            use: '56 Black',
             react: "✅",
             filename: __filename
         },
         async(Void, citel, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
                 let text = tiny(
-                    "Fancy text generator\n\nExample: .fancy 32 Secktor\n\n"
+                    "Fancy text generator\n\nExample: .fancy 32 Black\n\n"
                 );
                 listall("Secktor Bot").forEach((txt, num) => {
                     text += `${(num += 1)} ${txt}\n`;
@@ -194,7 +194,7 @@ cmd({
             try {
                 link = text.split(" ")[0];
                 anu = await axios.get(`https://tinyurl.com/api-create.php?url=${link}`);
-                citel.reply(`*🛡️Your Shortened URL*\n\n${anu.data}`);
+                citel.reply(`*👾Your Shortened URL*\n\n${anu.data}`);
             } catch (e) {
                 console.log(e);
             }
@@ -322,6 +322,6 @@ else return console.log('File deleted successfully in TOAUDIO MP3 at : ' , media
 });
 
 }
-else return citel.reply ("```Uhh Please, Reply To A video Message```")
+else return citel.reply ("``` Please, Reply To A video Message```")
 }
 )
