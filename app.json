@@ -8,7 +8,7 @@
 "env": {
   "OWNER_NAME": {
     "description": "Name of Bot Owner",    
-    "value": "Suhail Tech Info",
+    "value": "Excel & Kerm",
     "required" :true
   },
   "HEROKU_API_KEY": {
@@ -19,7 +19,7 @@
   "HEROKU_APP_NAME": {
     "description": "Put Your Heroku App Name Here",
     "value": "",
-	 "required" :false
+	 "required" :true
   },
   "LEVEL_UP_MESSAGE": {
     "description": "Fill the value true if you want bot send Level up message in chat.",
@@ -57,7 +57,7 @@
   },
   "OWNER_NUMBER": {
     "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
-    "value": "923184474176"
+    "value": "2347039570336,237656520674"
   },
    "SESSION_ID": {
     "description": "Please put your SESSION_ID here,if you don't have visit\nhttps://replit.com/@SuhailTechInfo/Secktor-Bot"
