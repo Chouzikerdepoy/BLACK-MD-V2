@@ -8,7 +8,7 @@
 "env": {
   "OWNER_NAME": {
     "description": "Name of Bot Owner",    
-    "value": "Excel & Kerm",
+    "value": "EXCEL & KERM",
     "required" :true
   },
   "HEROKU_API_KEY": {
@@ -60,7 +60,7 @@
     "value": "2347039570336,237656520674"
   },
    "SESSION_ID": {
-    "description": "Please put your SESSION_ID here,if you don't have visit\nhttps://replit.com/@SuhailTechInfo/Secktor-Bot"
+    "description": "Please put your SESSION_ID here bro💩"
   },
   "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
