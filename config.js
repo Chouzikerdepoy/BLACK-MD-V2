@@ -6,14 +6,14 @@ if (fs.existsSync('config.env')) require('dotenv').config({ path: __dirname+'/co
 global.owner = process.env.OWNER_NUMBER || '2347039570336,237656520674'  // Make SURE its Not Be Empty, Else Bot Stoped And Errors,
 global.mongodb = process.env.MONGODB_URI || "mongodb+srv://ahil1:787191784abhi@ahil1.kzr1tt3.mongodb.net/?retrywrites=true&w=majority"
 global.port= process.env.PORT || 5000
-global.email = 'maxdavid126@gmail.com'
+global.email = 'excelottah6@gmail.com'
 global.github = 'https://github.com/excelottah6/BLACK-MD-V2'
-global.location = 'Lahore pakistan'
+global.location = 'Africa Lagos'
 global.gurl = 'https://instagram.com/big_dmall/' // add your username
 global.sudo = process.env.SUDO || "2347039570336,237656520674"
 global.devs = '2347039570336,237656520674';
 global.website = 'https://github.com/excelottah6/BLACK-MD-V2' //wa.me/+91000000000000
-global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/3f3ae4aace2d012c11509.jpg'
+global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://i.imgur.com/lhQ8Cro.jpeg'
 module.exports = {
   sessionName: process.env.SESSION_ID || " ",      //Put Your Session Id Here
   author:  process.env.PACK_AUTHER ||  'BLACK MD',
