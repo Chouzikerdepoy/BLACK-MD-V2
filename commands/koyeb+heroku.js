@@ -45,7 +45,7 @@ cmd(
                   } catch { console.log('heroku remote adding error'); }	
                   await git.push('heroku', 'main');	
       
-                  return '*ʙᴏᴛ has ᴜᴘᴅᴀᴛᴇᴅ...*\n_Restarting._'	
+                  return '*ʙᴏᴛ ᴜᴘᴅᴀᴛᴇᴅ...*\n_Restarting._'	
       
       
               }	
@@ -55,7 +55,7 @@ cmd(
         const DB = require('../lib')
         let commits = await DB.syncgit()
         if (commits.total === 0)  {
-         citel.reply(`Hey ${citel.pushName}.  latest version installed.`)
+         citel.reply(`Hey ${citel.pushName}. You have latest version installed.`)
           } else { 
              citel.reply('Build Started...')
             let update = await DB.updatedb()
