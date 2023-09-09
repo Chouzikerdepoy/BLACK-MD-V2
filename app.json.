@@ -1,14 +1,14 @@
 {
-  "name": "BLADE-MD",
+  "name": "BLACK-MD",
   "description": "A Whatsapp md bot built in NodeJs to make experience better",
-  "logo": "https://telegra.ph/file/3c341828d86ee7a89c73f.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "blade Bot", "blade","BLADE-MD","theme bot","multi device","baileys","Alex tv"],
+  "logo": "https://i.imgur.com/lhQ8Cro.jpeg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "GOJO", "BLACK Bot", "black","BLACK-MD","theme bot","multi device","baileys","BLACK"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
   "description": "BOT OWNER NAME",
-      "value": "alexdavid"
+      "value": "excelottah"
   },
   "ALIVE_MESSAGE": {
     "description": " SET YOUR ALIVE MESSAGE FOR THE BOT",
@@ -33,7 +33,7 @@
     },
    "THUMB_IMAGE": {
     "description": "THUMBNAIL for bot.",
-     "value": "https://telegra.ph/file/3f3ae4aace2d012c11509.jpg"
+     "value": "https://i.imgur.com/lhQ8Cro.jpeg"
     },
     "ANTI_BAD_WORD": {
     "description": "Put words here. If you want it enabled in your bot otherwise leave it blank",
@@ -73,37 +73,37 @@
        "value": "Put Owner Number here"
   },
    "SESSION_ID": {
-    "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to BLADE-MD Github Repo U can find the Scanner Option"
+    "description": " put your Session ID that u scanned from the bot.... If u haven't scanned go to BLACK-MD Github Repo U can find the Scanner Option"
   },
     "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com(optional if u don't wan't then don't put it ",
-       "value": "https://gurugpt.cyclic.app/dalle?prompt=elon%20musk&model=art",
+       "value": "",
        "required" :false
   },
   "MONGODB_URI": {
     "description": "A secret String for Mongodb Connection.(Required),change for better experience",
-    "value": "mongodb://usrdhz7ejxwayzvw69qm:fRuJImqP1BOZyGk9fD6@bupt7kruqljyivftjl4i-mongodb.services.clever-cloud.com:2791/bupt7kruqljyivftjl4i"
+    "value": "mongodb://uufpxy0mfyeykbrxkjpk:m1b0dsDODVFWlBy3AF3@bufirembtiksxw6ni25m-mongodb.services.clever-cloud.com:2533/bufirembtiksxw6ni25m"
   },
     "THEME": {
-    "description": "Put the theme name you want to use. Avilable themes are GOJO,blade-md,NEZUKO,LUFFY,GOKU and many more..",
-     "value": "blade-md"
+    "description": "Put the theme name you want to use. Avilable themes are GOJO,BLACK-MD,NEZUKO,LUFFY,GOKU and many more..",
+     "value": "GOJO"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
-         "value": "public"
+         "value": "private"
   },
       "AUTO_REACTION": {
     "description": "Reacts emoji to all commands.",
-     "value": "false",
+     "value": "true",
      "required": false 
   },
   "PACK_AUTHOR": {
     "description": "PUT STICKER AUTHER NAME",
-    "value": "BLADE"
+    "value": "BLACK"
   },
   "PACK_NAME": {
     "description": "PUT STICKER PACK NAME",
-    "value": "Wa-BOT"
+    "value": "WHATSAPP BOT"
   },
   "heroku": {
     "description": "Weather it is on heroku or not",
