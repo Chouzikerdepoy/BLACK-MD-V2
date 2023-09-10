@@ -698,24 +698,45 @@ async (Void, citel, text) => {
 
 cmd({
     pattern: "add",
-    desc: "Add a person to the group",
-    fromMe: true,
+    desc: "Adds a user to the group",
     category: "group",
     filename: __filename,
     use: '<number>',
 },
-async (Void, citel, text, { isCreator }) => {
+async (Void, citel, text) => {
     if (!citel.isGroup) return citel.reply(tlang().group);
+
+    // Check if the user is trying to add too quickly (anti-spam)
+    if (antiSpam.has(citel.sender)) {
+        return citel.reply("Please wait a bit before using this command again.");
+    }
+
     const groupAdmins = await getAdmin(Void, citel);
     const botNumber = await Void.decodeJid(Void.user.id);
     const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
     const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
 
-    if (!text) return citel.reply("Please provide a number.");
-    if (!isCreator) return citel.reply(tlang().owner);
+    if (!isAdmins) return citel.reply(tlang().admin);
     if (!isBotAdmins) return citel.reply(tlang().botAdmin);
-    let users = citel.mentionedJid[0] ? citel.mentionedJid[0] : citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
-    await Void.groupParticipantsUpdate(citel.chat, [users], "add");
+
+    try {
+        let users = citel.mentionedJid[0] ? citel.mentionedJid[0] : citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
+        if (!users) return;
+
+        await Void.groupParticipantsUpdate(citel.chat, [users], "add");
+        
+        // Mark the user as having used the command (anti-spam)
+        antiSpam.add(citel.sender);
+        
+        // Set a timeout to remove the user from the anti-spam Set after a delay (e.g., 60 seconds)
+        setTimeout(() => {
+            antiSpam.delete(citel.sender);
+        }, 60000); // 60 seconds
+
+        return await Void.sendMessage(citel.chat, { react: { text: '✨', key: citel.key }});
+    } catch {
+        // Handle errors here
+    }
 });
 
 cmd({
