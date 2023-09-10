@@ -3,9 +3,9 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : BLACK-MD
+ * @project_name : BLADE-MD
  * @author : salmanytofficial <https://github.com/Bladeh4x>
- * @description : BLACK, A Multi-functional whatsapp bot.
+ * @description : BLADE, A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -37,7 +37,7 @@ cmd({
     alias :['gpt'],
     desc: "chat with an AI(GPT)",
     category: "AI",
-    use: '<Hii,black>',
+    use: '<Hii,blade>',
     filename: __filename,
 },
 async(Void, citel,text) => {
@@ -46,7 +46,7 @@ async(Void, citel,text) => {
         let {data} = await axios.get(`http://api.brainshop.ai/get?bid=167991&key=aozpOoNOy3dfLgmB&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
         return citel.reply(data.cnt);  
     }
-    if (!text) return citel.reply(`Hey there! ${citel.pushName}. How are you doing ?`);
+    if (!text) return citel.reply(`Hey there! ${citel.pushName}. How are you doing these days?`);
     // const { Configuration, OpenAIApi } = require("openai");
     // const configuration = new Configuration({
     //     apiKey: Config.OPENAI_API_KEY || "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",
@@ -132,16 +132,16 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/excelottah6/BLACK-MD-v2')
+        let { data } = await axios.get('https://api.github.com/repos/Bladeh4x/BLADE-MD')
         let cap = `Hey ${citel.pushName}\n
-	════ ⋆★⋆ ════
 *⭐ Total Stars:* ${data.stargazers_count} stars
-*👾 Forks:* ${data.forks_count} forks
-*👾 Repo:* https://github.com/excelottah6/BLACK-MD-v2
-*Group:* https://chat.whatsapp.com/FixEhA9BNH46sYyLOAqCps
+*🍽️ Forks:* ${data.forks_count} forks
+*🍁 Repo:* https://github.com/Bladeh4x/BLADE-MD
+*Group:* https://chat.whatsapp.com/ErxOiX1qQgk9phDJhnUiDQ
+*public group:* https://chat.whatsapp.com/FLHNgJ19pZG48S7l6ucSn8
+*scan Qr:* https://replit.com/@Bladeh4x/BLADE-MD-V1?v=1
 *Deploy Your Own:*-
-citel-x.herokuapp.com
-════ ⋆★⋆ ════`
+https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBladeh4x%2FBLADE-MD&template=https%3A%2F%2Fgithub.com%2FBladeh4x%2FBLADE-MD`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -149,7 +149,7 @@ citel-x.herokuapp.com
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "BLACK-Repo",
+                    title: "BLADE-Repo",
                     body: "Easy to Use",
                     thumbnail: log0,
                     mediaType: 4,
@@ -177,15 +177,13 @@ cmd({
         timestampe = speed();
         latensie = speed() - timestampe;
         let ter = `
-🥷 *${tlang().title}* 🥷
-════ ⋆★⋆ ════
-*😁Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
-*⚡️Speed:* ${latensie.toFixed(4)} ms
-*📡Uptime:* ${runtime(process.uptime())}
-*🗂Version:* 0.0.7
+🔰 *${tlang().title}* 🔰
+*🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
+*⚡Speed:* ${latensie.toFixed(4)} ms
+*🚦Uptime:* ${runtime(process.uptime())}
+*🕸Version:* 0.0.7
 *👤Owner:*  ${Config.ownername}
 *Powered by ${tlang().title}*
-════ ⋆★⋆ ════
 `;
         let buttonMessaged = {
             image: {
@@ -222,8 +220,8 @@ cmd({
 async(Void, citel,text,{isCreator}) => {
 
 if(!isCreator) return citel.reply(tlang().owner);
-let str="*All available themes in ʙʟᴀck-ᴍᴅ*"
-str+=`  \n1. GOJO\n2. ONE-PUNCH\n3. AYANOKOJI\n4. DEKU\n5. RENGOKU\n6. GENOS\n7. GABIMARU\n8. GOKU\n9. ERENJAEGER\n10. LUFFY\n11. NARUTO\n12. NEZUKO\n13. PARKER\n14. CODM\n15. MAKIMA\n16. THOMAS\n17. PATRICK\n\n these are the themes of ʙʟack-ᴍᴅ Userbot.\_Reply ${prefix}setvar THEME:GOJO`
+let str="*All available themes in ʙʟᴀᴅᴇ-ᴍᴅ*"
+str+=`  \n1. GOJO\n2. SONIC-MD\n3. AYANOKOJI\n4. DEKU\n5. RENGOKU\n6. GENOS\n7. GABIMARU\n8. GOKU\n9. ERENJAEGER\n10. LUFFY\n11. NARUTO\n12. NEZUKO\n13. PARKER\n14. blade-md\n15. MAKIMA\n16. THOMAS\n17. PATRICK\n\n these are the themes of ʙʟᴀᴅᴇ-ᴍᴅ Userbot.\_Reply ${prefix}setvar THEME:ZEROTWO`
 return citel.reply(str)
     
 }
