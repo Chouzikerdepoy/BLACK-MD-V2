@@ -125,25 +125,25 @@ Void.sendMessage(citel.chat,{image:{url:data.data[0].url}})
 
 //---------------------------------------------------------------------------
 cmd({
-        pattern: "repo",
-        alias: ["git", "sc", "script"],
-        desc: "Sends info about repo.",
-        category: "general",
-        filename: __filename,
-    },
-    async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/excelottah6/BLACK-MD-V2')
+    pattern: "repo",
+    alias: ["git", "sc", "script"],
+    desc: "Sends info about repo.",
+    category: "general",
+    filename: __filename,
+},
+async (Void, citel) => {
+    try {
+        let { data } = await axios.get('https://api.github.com/repos/excelottah6/BLACK-MD-V2');
         let cap = `Hey ${citel.pushName}\n
-╔═════ ▓▓ ࿇ ▓▓ ═════╗
-*✨ Total Stars:* ${data.stargazers_count} stars
-*🍴 Forks:* ${data.forks_count} forks
-*⚡️ Repo:* https://github.com/excelottah6/BLACK-MD-V2
-*Group:* https://chat.whatsapp.com/ErxOiX1qQgk9phDJhnUiDQ
-*public group:* https://chat.whatsapp.com/FLHNgJ19pZG48S7l6ucSn8
-*scan Qr:* https://replit.com/@Excelottah/BLACK-Md?
-*Deploy Your Own:*-
-https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBladeh4x%2FBLADE-MD&template=https%3A%2F%2Fgithub.com%2Fexcelottah6%2FBLACK-MD-V2 
-╚═════ ▓▓ ࿇ ▓▓ ═════╝`
+        ╔═════ ▓▓ ࿇ ▓▓ ═════╗
+        *✨ Total Stars:* ${data.stargazers_count} stars
+        *🍴 Forks:* ${data.forks_count} forks
+        *⚡️ Repo:* https://github.com/excelottah6/BLACK-MD-V2
+        *Group:* https://chat.whatsapp.com/FixEhA9BNH46sYyLOAqCps
+        *public group:* https://chat.whatsapp.com/FixEhA9BNH46sYyLOAqCps
+        *scan Qr:* https://replit.com/@Excelottah/BLACK-Md?
+        *Deploy Your Own:* https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2F&template=https%3A%2F%2Fgithub.com%2Fexcelottah6%2FBLACK-MD-V2
+        ╚═════ ▓▓ ࿇ ▓▓ ═════╝`;
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -163,54 +163,57 @@ https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBladeh4x%
         return await Void.sendMessage(citel.chat, buttonMessaged, {
             quoted: citel,
         });
-
+    } catch (error) {
+        console.error(error);
+        return citel.reply("Failed to fetch repo information.");
     }
-)
+});
+
 //---------------------------------------------------------------------------
 cmd({
-        pattern: "status",
-        alias: ["about"],
-        desc: "To check bot status",
-        category: "general",
-        filename: __filename,
-    },
-    async(Void, citel) => {
-        const uptime = process.uptime();
-        timestampe = speed();
-        latensie = speed() - timestampe;
-        let ter = `
-🔰 *${tlang().title}* 🔰
-╔═════ ▓▓ ࿇ ▓▓ ═════╗
-*🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
-*⚡Speed:* ${latensie.toFixed(4)} ms
-*🚦Uptime:* ${runtime(process.uptime())}
-*🕸Version:* 0.0.7
-*👤Owner:*  ${Config.ownername}
-*Powered by ${tlang().title}*
-╚═════ ▓▓ ࿇ ▓▓ ═════╝`;
-        let buttonMessaged = {
-            image: {
-                url: await botpic(),
+    pattern: "status",
+    alias: ["about"],
+    desc: "To check bot status",
+    category: "general",
+    filename: __filename,
+},
+async (Void, citel) => {
+    const uptime = process.uptime();
+    timestampe = speed();
+    latensie = speed() - timestampe;
+    let ter = `
+    🔰 *${tlang().title}* 🔰
+    ╔═════ ▓▓ ࿇ ▓▓ ═════╗
+    *🌟Description:* A WhatsApp bot with rich features, built in NodeJs to make your WhatsApp experience enjoyable.
+    *⚡Speed:* ${latensie.toFixed(4)} ms
+    *🚦Uptime:* ${runtime(process.uptime())}
+    *🕸Version:* 0.0.7
+    *👤Owner:*  ${Config.ownername}
+    *Powered by ${tlang().title}*
+    ╚═════ ▓▓ ࿇ ▓▓ ═════╝`;
+    let buttonMessaged = {
+        image: {
+            url: await botpic(),
+        },
+        caption: ter,
+        footer: tlang().footer,
+        headerType: 4,
+        contextInfo: {
+            externalAdReply: {
+                title: tlang().title,
+                body: `Bot-Status`,
+                thumbnail: log0,
+                mediaType: 2,
+                mediaUrl: ``,
+                sourceUrl: ``,
             },
-            caption: ter,
-            footer: tlang().footer,
-            headerType: 4,
-            contextInfo: {
-                externalAdReply: {
-                    title: tlang().title,
-                    body: `Bot-Status`,
-                    thumbnail: log0,
-                    mediaType: 2,
-                    mediaUrl: ``,
-                    sourceUrl: ``,
-                },
-            },
-        };
-        return await Void.sendMessage(citel.chat, buttonMessaged, {
-            quoted: citel,
-        });
+        },
+    };
+    return await Void.sendMessage(citel.chat, buttonMessaged, {
+        quoted: citel,
+    });
+});
 
-    }
 )
 
 //---------------------------------------------------------------------------
