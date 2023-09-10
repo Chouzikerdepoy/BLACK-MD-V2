@@ -560,88 +560,82 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "kick",
-            desc: "Kicks replied/quoted user from group.",
-            category: "group",
-            filename: __filename,
-            use: '<quote|reply|number>',
-        },
-        async(Void, citel, text) => {
-            if (!citel.isGroup) return citel.reply(tlang().group);
-            const groupAdmins = await getAdmin(Void, citel)
-            const botNumber = await Void.decodeJid(Void.user.id)
-            const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
-            const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
+    pattern: "kick",
+    desc: "Kicks replied/quoted user from the group.",
+    category: "group",
+    filename: __filename,
+    use: '<quote|reply|number>',
+},
+async (Void, citel, text) => {
+    if (!citel.isGroup) return citel.reply(tlang().group);
+    const groupAdmins = await getAdmin(Void, citel);
+    const botNumber = await Void.decodeJid(Void.user.id);
+    const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
+    const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
 
-            if (!isAdmins) return citel.reply(tlang().admin);
-            if (!isBotAdmins) return citel.reply(tlang().botAdmin);
-            try {
-                let users = citel.mentionedJid[0] ? citel.mentionedJid[0] : citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
-                if (!users) return;
-                await Void.groupParticipantsUpdate(citel.chat, [users], "remove");
-            } catch {
-                //		citel.reply(tlang().botAdmin);
+    if (!isAdmins) return citel.reply(tlang().admin);
+    if (!isBotAdmins) return citel.reply(tlang().botAdmin);
+    try {
+        let users = citel.mentionedJid[0] ? citel.mentionedJid[0] : citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
+        if (!users) return;
+        await Void.groupParticipantsUpdate(citel.chat, [users], "remove");
+    } catch {
+        // citel.reply(tlang().botAdmin);
+    }
+});
 
-            }
-        }
-    )
-    //---------------------------------------------------------------------------
 cmd({
-            pattern: "memegen",
-            desc: "Write text on quoted image.",
-            category: "group",
-            filename: __filename,
-            use: '<text>',
-        },
-        async(Void, citel, text) => {
-            let mime = citel.quoted.mtype
-            if (!/image/.test(mime)) return citel.reply(`Reply to Photo With Caption *text*`)
-            mee = await Void.downloadAndSaveMediaMessage(citel.quoted)
-            mem = await TelegraPh(mee)
-            meme = await getBuffer(`https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`)
-            let buttonMessage = {
-                image: meme,
-                caption: "Here we go",
-                footer: tlang().footer,
-                headerType: 4,
-            };
-            Void.sendMessage(citel.chat, buttonMessage, {
-                quoted: citel,
-            });
-            await fs.unlinkSync(mee)
+    pattern: "memegen",
+    desc: "Write text on a quoted image.",
+    category: "group",
+    filename: __filename,
+    use: '<text>',
+},
+async (Void, citel, text) => {
+    let mime = citel.quoted.mtype;
+    if (!/image/.test(mime)) return citel.reply(`Reply to a photo with caption *text*`);
+    mee = await Void.downloadAndSaveMediaMessage(citel.quoted);
+    mem = await TelegraPh(mee);
+    meme = await getBuffer(`https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`);
+    let buttonMessage = {
+        image: meme,
+        caption: "Here we go",
+        footer: tlang().footer,
+        headerType: 4,
+    };
+    Void.sendMessage(citel.chat, buttonMessage, {
+        quoted: citel,
+    });
+    await fs.unlinkSync(mee);
+});
 
-        }
-    )
-    //---------------------------------------------------------------------------
 cmd({
-            pattern: "group",
-            desc: "mute and unmute group.",
-            category: "group",
-            filename: __filename,
-        },
-        async(Void, citel, text) => {
-            if (!citel.isGroup) return citel.reply(tlang().group);
-            const groupAdmins = await getAdmin(Void, citel)
-            const botNumber = await Void.decodeJid(Void.user.id)
-            const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
-            const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
-            if (!citel.isGroup) return citel.reply(tlang().group);
-            if (!isBotAdmins) return citel.reply(tlang().botAdmin);
-            if (!isAdmins) return citel.reply(tlang().admin);
-            if (text.split(" ")[0] === "close") {
-                await Void.groupSettingUpdate(citel.chat, "announcement")
-                    .then((res) => reply(`Group Chat Muted :)`))
-                    .catch((err) => console.log(err));
-            } else if (text.split(" ")[0] === "open") {
-                await Void.groupSettingUpdate(citel.chat, "not_announcement")
-                    .then((res) => reply(`Group Chat Unmuted :)`))
-                    .catch((err) => console.log(err));
-            } else {
+    pattern: "group",
+    desc: "Mute and unmute the group.",
+    category: "group",
+    filename: __filename,
+},
+async (Void, citel, text) => {
+    if (!citel.isGroup) return citel.reply(tlang().group);
+    const groupAdmins = await getAdmin(Void, citel);
+    const botNumber = await Void.decodeJid(Void.user.id);
+    const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
+    const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
+    if (!isBotAdmins) return citel.reply(tlang().botAdmin);
+    if (!isAdmins) return citel.reply(tlang().admin);
+    if (text.split(" ")[0] === "close") {
+        await Void.groupSettingUpdate(citel.chat, "announcement")
+            .then((res) => citel.reply(`Group Chat Muted :)`))
+            .catch((err) => console.log(err));
+    } else if (text.split(" ")[0] === "open") {
+        await Void.groupSettingUpdate(citel.chat, "not_announcement")
+            .then((res) => citel.reply(`Group Chat Unmuted :)`))
+            .catch((err) => console.log(err));
+    } else {
+        return citel.reply(`Group Mode:\n${prefix}group open- to open\n${prefix}group close- to close`);
+    }
+});
 
-                return citel.reply(`Group Mode:\n${prefix}group open- to open\n${prefix}group close- to close`);
-            }
-        }
-    )
     //---------------------------------------------------------------------------
 cmd({
             pattern: "grouppic",
